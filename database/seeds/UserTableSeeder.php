@@ -15,7 +15,7 @@ class UserTableSeeder extends Seeder {
         DB::table('user_services')->truncate();
         DB::table('life_snapshots')->truncate();
 
-        $user = User::create(['email' => 'will.washburn@gmail.com','name'=>'Will Washburn']);
+        $user = User::create(['email' => 'emailaddress@example.com','name'=>'Will Washburn']);
 
         Service::create(['user_id'=>$user->id,'type'=>Service::TYPE_LASTFM,'identifier'=>'willwashburn']);
     }
